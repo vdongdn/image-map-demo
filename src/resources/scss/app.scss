@@ -1,7 +1,7 @@
 @import "variables";
 
-.container {
-    padding: 100px;
+.bodyWrapper {
+    padding-top: 100px;
 }
 
 .landing-header {
@@ -32,7 +32,7 @@
     border-radius: 8px;
     line-height: 1;
     padding: 11px 25px;
-    color: #000;
+    color: #001;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -42,4 +42,26 @@
 .open-todaysDeath-button:hover {
     background: #fff;
     color: #f8bd4a;
+}
+
+.footerWrap {
+    background-color: #020001;
+}
+
+.footerContent {
+    padding: 8px 15px;
+    text-align: center;
+}
+
+.footerContent span {
+    color: #fff;
+}
+
+#row01 {
+    position: relative;
+    z-index: 2;
+}
+
+#divSlotImage {
+    position: relative;
 }
