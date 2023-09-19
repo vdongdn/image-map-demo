@@ -1,0 +1,15 @@
+<div style="height: 1000px; background-color: aquamarine;">
+
+</div>
+<script>
+    var header = $(".landing-header");
+    var headerHeight = header.outerHeight();
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= headerHeight) {
+            header.addClass("sticky-header");
+        } else {
+            header.removeClass("sticky-header");
+        }
+    });
+</script>
