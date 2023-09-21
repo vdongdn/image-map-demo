@@ -1,18 +1,18 @@
-const mongoose = require('mongoose');
-mongoose.set('useNewUrlParser', true);
+const mysql = require('mysql');
 
-async function connect() {
-    try {
-        await mongoose.connect('mongodb://127.0.0.1/travel_dev', 
-        { 
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-            useCreateIndex: true
-        });
-        console.log("Connect success!!!")
-    } catch (error) {
-        console.log("Connect fail!!!")
+const connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'dev',
+    password : 'Admin#321',
+    database : 'cemetery_dev'
+});
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
     }
-}
+    console.log('connect successfully!!!!');
+});
 
-module.exports = {connect};
+module.exports = {connection};
